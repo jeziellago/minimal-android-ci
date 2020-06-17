@@ -6,6 +6,7 @@ cd minimal-android-ci/
 docker build . -t android-ci:1.0
 ```
 ## Create container and start CI
+Put your workflow build steps on `ci.sh` and run:
 ```
 docker run -id --name=android-ci android-ci:1.0 \
 && docker cp ci.sh android-ci:/ \
